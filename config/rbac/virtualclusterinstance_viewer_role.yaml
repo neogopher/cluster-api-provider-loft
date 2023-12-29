@@ -1,0 +1,27 @@
+# permissions for end users to view virtualclusterinstances.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: virtualclusterinstance-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: cluster-api-provider-loft
+    app.kubernetes.io/part-of: cluster-api-provider-loft
+    app.kubernetes.io/managed-by: kustomize
+  name: virtualclusterinstance-viewer-role
+rules:
+- apiGroups:
+  - infrastructure.cluster.x-k8s.io
+  resources:
+  - virtualclusterinstances
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - infrastructure.cluster.x-k8s.io
+  resources:
+  - virtualclusterinstances/status
+  verbs:
+  - get
