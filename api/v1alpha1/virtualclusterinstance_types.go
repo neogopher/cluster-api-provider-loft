@@ -72,6 +72,16 @@ type VirtualClusterInstanceStatus struct {
 	ObservedGeneration int64 `json:"observedGeneration,omitempty"`
 }
 
+// GetConditions returns the set of conditions for this object.
+func (in *VirtualClusterInstance) GetConditions() Conditions {
+	return in.Status.Conditions
+}
+
+// SetConditions sets the conditions on this object.
+func (in *VirtualClusterInstance) SetConditions(conditions Conditions) {
+	in.Status.Conditions = conditions
+}
+
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 
