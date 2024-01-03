@@ -7,6 +7,7 @@ toolchain go1.21.5
 require (
 	github.com/loft-sh/agentapi/v3 v3.3.3
 	github.com/loft-sh/api/v3 v3.3.3
+	k8s.io/api v0.28.4
 	k8s.io/apimachinery v0.28.4
 	k8s.io/client-go v0.28.4
 	sigs.k8s.io/cluster-api v1.6.0
@@ -97,7 +98,6 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/api v0.28.4 // indirect
 	k8s.io/apiextensions-apiserver v0.28.4 // indirect
 	k8s.io/apiserver v0.28.4 // indirect
 	k8s.io/component-base v0.28.4 // indirect
