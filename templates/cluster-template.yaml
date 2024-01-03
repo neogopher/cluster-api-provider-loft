@@ -1,0 +1,24 @@
+apiVersion: cluster.x-k8s.io/v1beta1
+kind: Cluster
+metadata:
+  name: ${CLUSTER_NAME}
+spec:
+  infrastructureRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+    kind: VirtualClusterInstance
+    name: ${CLUSTER_NAME}
+  controlPlaneRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+    kind: VirtualClusterInstance
+    name: ${CLUSTER_NAME}
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+kind: VirtualClusterInstance
+metadata:
+  name: ${CLUSTER_NAME}
+spec:
+  template: ${TEMPLATE}
+  project: ${PROJECT:=default}
+  controlPlaneEndpoint:
+    host: ${VCLUSTER_HOST:=""}
+    port: ${VCLUSTER_PORT:=0}
