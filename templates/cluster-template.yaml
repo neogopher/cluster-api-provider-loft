@@ -17,7 +17,8 @@ kind: VirtualClusterInstance
 metadata:
   name: ${CLUSTER_NAME}
 spec:
-  template: ${TEMPLATE}
+  templateRef: 
+    name: ${TEMPLATE}
   project: ${PROJECT:=default}
   controlPlaneEndpoint:
     host: ${VCLUSTER_HOST:=""}
