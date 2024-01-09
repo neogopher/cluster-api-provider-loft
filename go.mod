@@ -5,14 +5,18 @@ go 1.21.4
 toolchain go1.21.5
 
 require (
-	github.com/google/go-cmp v0.6.0
+	github.com/loft-sh/agentapi/v3 v3.3.3 // indirect
 	github.com/loft-sh/api/v3 v3.3.3
-	github.com/pkg/errors v0.9.1
 	k8s.io/api v0.28.4
 	k8s.io/apimachinery v0.28.4
 	k8s.io/client-go v0.28.4
 	sigs.k8s.io/cluster-api v1.6.0
 	sigs.k8s.io/controller-runtime v0.16.3
+)
+
+require (
+	github.com/google/go-cmp v0.6.0
+	github.com/pkg/errors v0.9.1
 )
 
 require (
@@ -51,8 +55,8 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/loft-sh/admin-apis v0.0.0-20231102064836-7a6574be5f16 // indirect
-	github.com/loft-sh/agentapi/v3 v3.3.3 // indirect
 	github.com/loft-sh/apiserver v0.0.0-20231018103030-cf3977856bec // indirect
+	github.com/loft-sh/jspolicy v0.1.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

@@ -17,6 +17,7 @@ limitations under the License.
 package v1alpha1
 
 import (
+	managementv1 "github.com/loft-sh/api/v3/pkg/apis/management/v1"
 	storagev1 "github.com/loft-sh/api/v3/pkg/apis/storage/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	clusterv1beta1 "sigs.k8s.io/cluster-api/api/v1beta1"
@@ -36,9 +37,12 @@ type VirtualClusterInstanceSpec struct {
 	// +optional
 	Project string `json:"project"`
 
-	// Template is the name of the template to be used for creating the virtualclusterinstance
-	// +optional
-	Template string `json:"template"`
+	// // Template is the name of the template to be used for creating the virtualclusterinstance
+	// // +optional
+	// Template string `json:"template"`
+
+	// VirtualClusterInstanceSpec holds the specification
+	managementv1.VirtualClusterInstanceSpec `json:",inline"`
 }
 
 // VirtualClusterInstanceStatus defines the observed state of VirtualClusterInstance
